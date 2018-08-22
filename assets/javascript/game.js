@@ -59,10 +59,10 @@ var underScores = [];
    
     // add underscores to underScores array according to length of currentWord
     for (i = 0; i < currentWord; i++){
-        underScores.push('_');
-        underScores.toString();
-        console.log(underScores)
-        }
+            underScores.push('___ ');
+            underScores.toString();
+            console.log(underScores)  
+    }
 
     // output --> ['_', '_', '_', '_', '_',]
     // TODO:
@@ -70,6 +70,7 @@ var underScores = [];
     // convert array into a string
         
     // select HTML and display underScores
+    var underScores = document.getElementById('guessing-arena').innerHTML = underScores;
     // display guessesLeft, wins, losses
 //}
 
@@ -104,17 +105,8 @@ var underScores = [];
 
 
 //This functions makes note of what key user presses
-document.onKeyUp = function (event){
 
     // declare variable userGuess as whatever key the user inputs
-    var userGuess = event.key
-        if (userGuess in words){
-            console.log("Valid guess");
-        }
-        else {
-            console.log("Invalid key")
-        }
-}
 
 
 // Pseduo Code Review
