@@ -7,26 +7,13 @@
 var alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
 
 //define object 'michaelJordan' with following properties
-var michaelJordan = {
-    lastname: "Jordan",
-    team: "Chicago Bulls",
-    jersey: 23,
-    inhall: true
-}
+var michaelJordan = "Jordan"
 //define object 'shawnKemp' with following properties
-var shawnKemp = {
-    lastname: "Kemp",
-    team: "Seattle SuperSonics",
-    jersey: 40,
-    inhall: false
-}
+var shawnKemp = "Kemp";
+    
 //define object 'shaq' with following properties
-var shaq = {
-    lastname: "ONeal",
-    team: "Los Angeles Lakers",
-    jersey: 32,
-    inhall: true
-}
+var shaq = "ONeal";
+
 
 // declare the array 'words' to store all words that could be guessed during the game
 var wordBank = [michaelJordan, shawnKemp, shaq];
@@ -41,15 +28,16 @@ var guessesLeft = 10;
 var wrongGuesses = [];
 
 // declare variable for userInput from keyboard event
-var userInput 
+var userInput;
 
 // randomly chosen word from wordbank
-var chosenWord = 
+var chosenWord; 
 
 // declare currentWord which will be a word from wordBank
-var currentWord = 
+var currentWord = wordBank[Math.floor(Math.random() * wordBank.length)];
+    console.log("Randomly chosen word:", currentWord);
 
-// declare variable drawnWord in order in order to compare 
+// declare variable drawnWord in order to compare 
 var drawnWord = [];
 
 // underscores will be displayed on page load and will be updated as user plays game
@@ -65,11 +53,22 @@ var underScores = [];
     // ex: 
     // input --> currentWord = 'Jordan'
     // define the length of currentWord
+    var currentWord = currentWord.length;
+        console.log("charlength of currentWord:",currentWord)
+
+   
     // add underscores to underScores array according to length of currentWord
+    for (i = 0; i < currentWord; i++){
+        underScores.push('_');
+        underScores.toString();
+        console.log(underScores)
+        }
+
     // output --> ['_', '_', '_', '_', '_',]
     // TODO:
     // need to write syntax using current word as our input and this should output array of underscores according to length of currentWord
     // convert array into a string
+        
     // select HTML and display underScores
     // display guessesLeft, wins, losses
 //}
@@ -104,8 +103,6 @@ var underScores = [];
 //}
 
 
-console.log(words)
-
 //This functions makes note of what key user presses
 document.onKeyUp = function (event){
 
@@ -136,7 +133,6 @@ document.onKeyUp = function (event){
 
 
 // structure of script
-    var userGuess = document.keyup()
 
 
 
