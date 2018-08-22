@@ -1,6 +1,8 @@
 // declare the array 'words' to store all words that could be guessed during the game
 var words = [michaelJordan, shawnKemp, shaq]
 
+// declare array 'alphabet' to store all letters a user could guess
+var alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
 
 //define object 'michaelJordan' with following properties
 var michaelJordan = {
@@ -23,6 +25,5 @@ var shaq = {
     jersey: 32,
     inhall: true
 }
-
-console.log(words)
+//
 
