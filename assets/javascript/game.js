@@ -82,12 +82,28 @@ var underScores = [];
 
 // =========================== EVENT LISTENERS =========================== //
 // on page load execute our reset function
+// reset()
+
+// use document.onKeyUp = function(event){
+    // userGuess = <value from event object>
+
+
+    // ex:
+    // currentWord = 'jordan'
+    // userGuess = 'j'
+    // if userGuess guesses a correct letter, check to see if userGuess equals a letter in the array
+
+    // if() {
+        // update the underscores array
+        // output --> ['j', '_', '_', '_', '_', '_',]
+    }
+//}
 
 
 console.log(words)
 
 //This functions makes note of what key user presses
-document.onkeyup = function (event){
+document.onKeyUp = function (event){
 
     // declare variable userGuess as whatever key the user inputs
     var userGuess = event.key
