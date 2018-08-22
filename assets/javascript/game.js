@@ -1,6 +1,3 @@
-
-
-
 // =========================== VARIABLES =========================== //
 
 // declare array 'alphabet' to store all letters a user could guess
@@ -14,9 +11,12 @@ var shawnKemp = "Kemp";
 //define object 'shaq' with following properties
 var shaq = "ONeal";
 
+//define object 'olajuwon' with following properties
+var hakeemOlajuwon = "Olajuwon";
+
 
 // declare the array 'words' to store all words that could be guessed during the game
-var wordBank = [michaelJordan, shawnKemp, shaq];
+var wordBank = [michaelJordan, shawnKemp, shaq, hakeemOlajuwon];
 
 // declare variable wins
 var wins = 0;
@@ -28,7 +28,7 @@ var guessesLeft = 10;
 var wrongGuesses = [];
 
 // declare variable for userInput from keyboard event
-var userInput;
+// var userInput;
 
 // randomly chosen word from wordbank
 var chosenWord; 
@@ -46,7 +46,7 @@ var underScores = [];
 
 // =========================== FUNCTIONS =========================== //
 
-// function reset() {
+//function init() {
     // randomly choose a word from wordBank
     // Math.floor and math.random function to randomly choose a word from the wordBank
 
@@ -65,26 +65,57 @@ var underScores = [];
     }
 
     // output --> ['_', '_', '_', '_', '_',]
-    // TODO:
+    //
     // need to write syntax using current word as our input and this should output array of underscores according to length of currentWord
     // convert array into a string
         
     // select HTML and display underScores
-    var underScores = document.getElementById('guessing-arena').innerHTML = underScores;
+    var underScores = document.getElementById('chosen-word').innerHTML = underScores;
     // display guessesLeft, wins, losses
+
 //}
 
+ document.onkeyup = function(event) {
+    // Determines which key was pressed
+     var userInput = event.key;
+        // Check to see if userInput is a letter
+        if (alphabet.indexOf(userInput) >=0) {
+            // console.log userInput
+            console.log("userInput:", userInput);
+            var UserInput = document.getElementById('letters-guessed').innerHTML = userInput;
+            // function to check in userInput matches index of chosenWord
 
-// function compare() {
-    //
+            // if userInput is in chosenWord replace underscore with letter in correct position
+
+            // else decrease guesses remaining by 1
+
+            }
+        else{
+            alert("You entered an invalid key")
+        }
+ }
+    // if userInput in array alphabet function compare() {}
+    //     if (userInput in alphabet) {
+    //         console.log(userInput);
+    //     }
+    //     else {
+    //         alert("You entered an invalid key")
+    //     }
+    // }
+    // if userInput not in chosenWord then
+        //decrease guessesremaining by 1
+        //add userInput to lettersguessed
+    // else replace correct index in underScores with userInput
+    //else alert("you entered an invalid key")
 //}
 
 
 // =========================== EVENT LISTENERS =========================== //
-// on page load execute our reset function
+
 // reset()
 
-// use document.onKeyUp = function(event){
+// var userInput = document.onKeyUp = function(event){}
+
     // userGuess = <value from event object>
 
 
