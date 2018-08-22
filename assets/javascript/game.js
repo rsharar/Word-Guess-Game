@@ -96,7 +96,11 @@ var underScores = [];
     // if() {
         // update the underscores array
         // output --> ['j', '_', '_', '_', '_', '_',]
-    }
+    //}
+      //  else {
+            // push wrong letter into wrongGuesses array
+            // decrease guessesLeft by 1
+        //}
 //}
 
 
@@ -113,7 +117,6 @@ document.onKeyUp = function (event){
         else {
             console.log("Invalid key")
         }
-
 }
 
 
