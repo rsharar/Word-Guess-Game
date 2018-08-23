@@ -4,15 +4,15 @@
 var alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
 
 //define object 'michaelJordan' with following properties
-var michaelJordan = "Jordan"
+var michaelJordan = "jordan"
 //define object 'shawnKemp' with following properties
-var shawnKemp = "Kemp";
+var shawnKemp = "kemp";
     
 //define object 'shaq' with following properties
-var shaq = "ONeal";
+var shaq = "shaq";
 
 //define object 'olajuwon' with following properties
-var hakeemOlajuwon = "Olajuwon";
+var hakeemOlajuwon = "olajuwon";
 
 
 // declare the array 'words' to store all words that could be guessed during the game
@@ -53,47 +53,60 @@ var underScores = [];
     // ex: 
     // input --> currentWord = 'Jordan'
     // define the length of currentWord
-    var currentWord = currentWord.length;
-        console.log("charlength of currentWord:",currentWord)
+    var currentWordLength = currentWord.length;
+        console.log("length of currentWord:",currentWordLength)
 
    
     // add underscores to underScores array according to length of currentWord
-    for (i = 0; i < currentWord; i++){
-            underScores.push('___ ');
-            underScores.toString();
+    for (i = 0; i < currentWordLength; i++){
+            underScores[i] = ' ___ ';
+            // convert array into a string
+            underScores.join();
+            // console.log underScores array
             console.log(underScores)  
-    }
-
-    // output --> ['_', '_', '_', '_', '_',]
-    //
-    // need to write syntax using current word as our input and this should output array of underscores according to length of currentWord
-    // convert array into a string
-        
-    // select HTML and display underScores
+    }     
+    // select HTML div by id 'chosen-word' and display underScores
     var underScores = document.getElementById('chosen-word').innerHTML = underScores;
     // display guessesLeft, wins, losses
 
 //}
 
- document.onkeyup = function(event) {
+// event listener for when key is pressed
+    document.onkeyup = function(event) {
     // Determines which key was pressed
      var userInput = event.key;
         // Check to see if userInput is a letter
         if (alphabet.indexOf(userInput) >=0) {
             // console.log userInput
             console.log("userInput:", userInput);
-            var UserInput = document.getElementById('letters-guessed').innerHTML = userInput;
-            // function to check in userInput matches index of chosenWord
-
-            // if userInput is in chosenWord replace underscore with letter in correct position
-
-            // else decrease guesses remaining by 1
-
+            var userInputPush = document.getElementById('letters-guessed').innerHTML = userInput;
+            // check if userInput matches index of chosenWord
+                   // if userInput is in chosenWord replace underscore with letter in correct position
+                   // if userInput is in currentWord console.log 'in the word'
+                if (currentWord.indexOf(userInput) > -1){
+                        for (j = 0; j < currentWordLength; j++){
+                            if (currentWord[j] === userInput){
+                                underScores[j] === userInput;
+                                console.log(underScores)
+                            }
+                        }
+                    console.log("in the word")
+                }
+                else{
+                    console.log("letter not in word")
+                    guessesLeft--
+                    var guessesLeft = document.getElementById('guesses-remaining').innerHTML.guessesLeft
+                }
             }
+                    // else decrease guesses remaining by 1 and add userInput to wrongGuesses array
+
+            
         else{
             alert("You entered an invalid key")
         }
- }
+    }
+
+ 
     // if userInput in array alphabet function compare() {}
     //     if (userInput in alphabet) {
     //         console.log(userInput);
