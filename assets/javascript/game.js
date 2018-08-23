@@ -5,6 +5,7 @@ var alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p',
 
 //define object 'michaelJordan' with following properties
 var michaelJordan = "jordan"
+
 //define object 'shawnKemp' with following properties
 var shawnKemp = "kemp";
     
@@ -80,8 +81,11 @@ var underScores = [];
             // console.log userInput
             console.log("userInput:", userInput);
             // need to push userInput to HTML but store all guesses as an array
-            for (k = 0; k < 1000; k++){
-            var userInputPush = document.getElementById('letters-guessed').innerHTML = userInput[k];
+            for (k = 0; k < 1; k++){
+                //add userinput to empty array wrongGuesses
+                wrongGuesses[k] = userInput;
+                console.log(wrongGuesses);
+                document.getElementById('letters-guessed').innerHTML = wrongGuesses;
             }
             // check if userInput matches index of chosenWord
                    // if userInput is in chosenWord replace underscore with letter in correct position
