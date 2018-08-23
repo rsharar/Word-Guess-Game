@@ -35,8 +35,7 @@ var userInput;
 var chosenWord; 
 
 // declare currentWord which will be a word from wordBank
-var currentWord = wordBank[Math.floor(Math.random() * wordBank.length)];
-    console.log("Randomly chosen word:", currentWord);
+var currentWord;
 
 // declare variable drawnWord in order to compare 
 var drawnWord = [];
@@ -44,30 +43,35 @@ var drawnWord = [];
 // underscores will be displayed on page load and will be updated as user plays game
 var underScores = [];
 
+//global variable
+var s;
 
 // =========================== FUNCTIONS =========================== //
 
 //function init() {
-    // randomly choose a word from wordBank
     // Math.floor and math.random function to randomly choose a word from the wordBank
 
     // ex: 
     // input --> currentWord = 'Jordan'
     // define the length of currentWord
+    var currentWord = wordBank[Math.floor(Math.random() * wordBank.length)];
+    console.log("Randomly chosen word:", currentWord);
+
     var currentWordLength = currentWord.length;
         console.log("length of currentWord:",currentWordLength)
 
    
     // add underscores to underScores array according to length of currentWord
     for (i = 0; i < currentWordLength; i++){
-            underScores[i] = ' ___ ';
+            underScores[i] = " __";
             // convert array into a string
-            underScores.join();
+            s = underScores.join("");
             // console.log underScores array
             console.log(underScores)  
     }     
     // select HTML div by id 'chosen-word' and display underScores
-    var underScores = document.getElementById('chosen-word').innerHTML = underScores;
+    document.getElementById('chosen-word').innerHTML = s;
+
     // display guessesLeft, wins, losses
 
 //}
@@ -99,14 +103,16 @@ var underScores = [];
                         }
                     console.log("in the word")
                 }
-                else{
+                else {
                     console.log("letter not in word")
                     // derease guessesLeft by 1
                     guessesLeft--;
                     // change guessesLeft in HTML
                     var guessesLeftPush =document.getElementById('guesses-remaining').innerHTML = guessesLeft;
-                    }                
-            }
+                        }
+                    }
+                           
+            
                     // else decrease guesses remaining by 1 and add userInput to wrongGuesses array
 
             
