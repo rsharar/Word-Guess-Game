@@ -62,7 +62,7 @@ var s;
 
    
     // add underscores to underScores array according to length of currentWord
-    for (i = 0; i < currentWordLength; i++){
+    for (var i = 0; i < currentWordLength; i++){
             underScores[i] = " __";
             // convert array into a string
             s = underScores.join("");
@@ -85,17 +85,17 @@ var s;
             // console.log userInput
             console.log("userInput:", userInput);
             // need to push userInput to HTML but store all guesses as an array
-            for (k = 0; k < 1; k++){
+            for (var k = 0; k < 1; k++){
                 //add userinput to empty array wrongGuesses
                 wrongGuesses[k] = userInput;
                 console.log(wrongGuesses);
-                document.getElementById('letters-guessed').innerHTML = wrongGuesses;
+                document.getElementById('letters-guessed').innerHTML += wrongGuesses;
             }
             // check if userInput matches index of chosenWord
                    // if userInput is in chosenWord replace underscore with letter in correct position
                    // if userInput is in currentWord console.log 'in the word'
                 if (currentWord.indexOf(userInput) > -1){
-                        for (j = 0; j < currentWordLength; j++){
+                        for (var j = 0; j < currentWordLength; j++){
                             if (userInput = ' ___ '){
                                 userInput === underScores[j];
                                 console.log(underScores);
@@ -184,7 +184,6 @@ var s;
 
 
 // structure of script
-
 
 
 
