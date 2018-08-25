@@ -86,6 +86,7 @@ document.onkeyup = function (event) {
                 // display guessed letters to HTML
                 document.getElementById('chosen-word').innerHTML = underScores;
                 if (!underScores.includes("__ ")){
+                    underScores.join("");
                     alert("Congratulations! You win!")
                     wins++;
                     document.getElementById('wins').innerHTML = wins;
