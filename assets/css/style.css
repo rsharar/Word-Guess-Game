@@ -1,8 +1,11 @@
+.background {
+    background-color:red;
+}
 .gamebox {
     border: 2px solid black;
-    margin-right: 100px;
-    margin-left: 100px;
+    background-color: white;
     margin-top: 200px;
+    margin-bottom: 200px;
 }
 
 .titleheader {
@@ -14,4 +17,8 @@
 .guessing-arena {
     text-align: center;
     font-size: 36px;
+}
+
+.footer {
+    height: 200px;
 }
